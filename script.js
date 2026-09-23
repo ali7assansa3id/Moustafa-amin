@@ -7,19 +7,22 @@ function openEnvelope() {
   if (opened) return;
   opened = true;
   
-  // إضافة فئة الحركة للظرف
+  // 1. تشغيل الصوت فوراً أثناء الحدث المباشر للضغط (يتجاوز حظر المتصفح)
+  if (weddingMusic) {
+    weddingMusic.play().then(() => {
+      console.log("تم تشغيل الصوت بنجاح");
+    }).catch(error => {
+      console.log("تنبيه: المتصفح منع التشغيل التلقائي:", error);
+    });
+  }
+
+  // 2. تطبيق حركة فتح الظرف
   envelope.classList.add("open");
 
-  // التشغيل عند اختفاء الظرف وظهور البطاقة للمستخدم (بعد 1 ثانية)
+  // 3. إخفاء شاشة الظرف بعد انتهاء الانيميشن (بعد 1.2 ثانية)
   setTimeout(() => {
     envelopeScreen.classList.add("hide");
-    
-    if (weddingMusic) {
-      weddingMusic.play().catch(error => {
-        console.log("تعذر التشغيل التلقائي للصوت:", error);
-      });
-    }
-  }, 1000);
+  }, 1250);
 }
 
 function toggleMusic() {
