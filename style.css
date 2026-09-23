@@ -8,14 +8,15 @@ html, body {
   margin: 0;
   min-height: 100%;
   font-family: "Aref Ruqaa", "Amiri", serif;
-  background: #120d0b;
-  color: #f8ead0;
+  background: #fcfbfa;
+  color: #3f362b;
 }
 
 body {
   overflow-x: hidden;
 }
 
+/* الصفحة الرئيسية */
 .page {
   min-height: 100vh;
   display: flex;
@@ -25,15 +26,15 @@ body {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 25%, rgba(194,153,79,.18), transparent 32%),
-    radial-gradient(circle at 20% 80%, rgba(139,91,45,.13), transparent 30%),
-    linear-gradient(145deg, #0e0908, #21140e 48%, #0d0907);
+    radial-gradient(circle at 50% 25%, rgba(212, 175, 55, 0.15), transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(207, 181, 59, 0.12), transparent 40%),
+    linear-gradient(145deg, #ffffff, #fbf9f4 50%, #f7f3eb);
 }
 
 .page:before, .page:after {
   content: "";
   position: absolute;
-  border: 1px solid rgba(210,172,104,.28);
+  border: 1px solid rgba(197, 160, 89, 0.25);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -52,21 +53,22 @@ body {
   right: -220px;
 }
 
+/* بطاقة الدعوة */
 .card {
   width: min(760px, 100%);
   min-height: 850px;
-  border: 1px solid rgba(220,181,105,.55);
+  border: 2px solid #d4af37;
   border-radius: 28px;
   padding: 38px 25px;
   position: relative;
   text-align: center;
-  background: linear-gradient(160deg, rgba(36,23,16,.95), rgba(17,12,10,.96));
-  box-shadow: 0 25px 80px rgba(0,0,0,.55), inset 0 0 55px rgba(210,168,89,.04);
+  background: #ffffff;
+  box-shadow: 0 15px 50px rgba(184, 134, 11, 0.12), inset 0 0 35px rgba(212, 175, 55, 0.05);
 }
 
 .ornament {
   font-size: 27px;
-  color: #d8b06b;
+  color: #c5a059;
   letter-spacing: 7px;
   margin: 3px 0 25px;
 }
@@ -74,7 +76,7 @@ body {
 .bismillah {
   font-family: "Amiri", serif;
   font-size: 24px;
-  color: #ead5ae;
+  color: #997a3a;
   margin-bottom: 24px;
 }
 
@@ -82,7 +84,7 @@ body {
   font-family: "Amiri", serif;
   font-size: 23px;
   line-height: 2.05;
-  color: #f3e4c8;
+  color: #4a4035;
   max-width: 650px;
   margin: auto;
 }
@@ -90,7 +92,7 @@ body {
 .intro {
   margin: 35px 0 10px;
   font-size: 22px;
-  color: #d7b77c;
+  color: #b8860b;
 }
 
 .names {
@@ -100,21 +102,21 @@ body {
 .groom {
   font-size: 53px;
   font-weight: 700;
-  color: #f1d49b;
-  text-shadow: 0 3px 15px rgba(216,176,107,.16);
+  color: #a67c1e;
+  text-shadow: 0 2px 10px rgba(197, 160, 89, 0.2);
 }
 
 .heart {
   font-family: serif;
   font-size: 31px;
-  color: #c9a05e;
+  color: #d4af37;
   margin: 4px;
 }
 
 .bride {
   font-size: 62px;
   font-weight: 700;
-  color: #f6e5bf;
+  color: #8c6819;
 }
 
 .divider {
@@ -127,12 +129,12 @@ body {
 
 .divider i {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #c9a05e, transparent);
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
   width: 35%;
 }
 
 .divider span {
-  color: #d8b06b;
+  color: #c5a059;
   font-size: 20px;
 }
 
@@ -145,20 +147,21 @@ body {
 }
 
 .box {
-  border: 1px solid rgba(210,172,104,.3);
+  border: 1px solid rgba(212, 175, 55, 0.4);
   border-radius: 18px;
   padding: 17px 10px;
-  background: rgba(255,255,255,.025);
+  background: #fdfbf7;
 }
 
 .box .label {
   font-size: 18px;
-  color: #c9a05e;
+  color: #b8860b;
 }
 
 .box .value {
   font-size: 21px;
   margin-top: 5px;
+  color: #3f362b;
 }
 
 .countdown {
@@ -173,19 +176,19 @@ body {
   min-width: 72px;
   padding: 10px 5px;
   border-radius: 14px;
-  background: rgba(201,160,94,.08);
-  border: 1px solid rgba(201,160,94,.25);
+  background: #fcf8ee;
+  border: 1px solid rgba(212, 175, 55, 0.35);
 }
 
 .unit b {
   display: block;
   font: 700 27px "Amiri", serif;
-  color: #f0d39c;
+  color: #a67c1e;
 }
 
 .unit small {
   font-family: "Amiri", serif;
-  color: #cdb88f;
+  color: #7a6332;
 }
 
 .buttons {
@@ -203,22 +206,29 @@ a, button {
   cursor: pointer;
   padding: 12px 22px;
   border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
 .primary {
-  background: #c7a05e;
-  color: #1b110b;
+  background: linear-gradient(135deg, #d4af37, #aa820a);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .secondary {
-  background: transparent;
-  color: #ecd7ae;
-  border: 1px solid #9f7c44;
+  background: #ffffff;
+  color: #8c6819;
+  border: 1px solid #c5a059;
+}
+
+.primary:hover, .secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(197, 160, 89, 0.35);
 }
 
 .footer {
   margin-top: 30px;
-  color: #9f8a6a;
+  color: #8c764d;
   font-family: "Amiri", serif;
   font-size: 15px;
 }
@@ -234,8 +244,8 @@ a, button {
   justify-content: center;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 45%, rgba(205,166,93,.15), transparent 28%),
-    linear-gradient(145deg, #0b0706, #21140d 55%, #0b0706);
+    radial-gradient(circle at 50% 45%, rgba(212, 175, 55, 0.2), transparent 40%),
+    linear-gradient(145deg, #ffffff, #f9f6f0 55%, #f1ebde);
   transition: opacity 1s ease, visibility 1s ease;
 }
 
@@ -246,7 +256,7 @@ a, button {
 }
 
 .envelope-hint {
-  color: #d9bd88;
+  color: #997a3a;
   font: 20px "Aref Ruqaa", "Amiri", serif;
   margin-bottom: 35px;
   animation: pulse 2s infinite;
@@ -257,7 +267,7 @@ a, button {
   aspect-ratio: 1.48;
   position: relative;
   cursor: pointer;
-  filter: drop-shadow(0 25px 35px rgba(0,0,0,.55));
+  filter: drop-shadow(0 15px 30px rgba(184, 134, 11, 0.2));
   perspective: 1000px;
 }
 
@@ -267,8 +277,8 @@ a, button {
 
 .env-back {
   inset: 0;
-  background: linear-gradient(145deg, #6f4a27, #a77b40 48%, #5b391e);
-  border: 1px solid #d0a866;
+  background: linear-gradient(145deg, #f5e9c9, #e2c98a 50%, #caa44f);
+  border: 1px solid #d4af37;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -277,7 +287,7 @@ a, button {
   content: "";
   position: absolute;
   inset: 12px;
-  border: 1px solid rgba(238,211,160,.35);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 5px;
 }
 
@@ -287,9 +297,9 @@ a, button {
   left: 9%;
   top: 8%;
   z-index: 2;
-  background: #f5e7ca;
-  border: 1px solid #d3b47a;
-  box-shadow: 0 4px 15px rgba(0,0,0,.2);
+  background: #ffffff;
+  border: 1px solid #e0ca8c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 1.25s cubic-bezier(.2,.8,.2,1), opacity .7s;
   display: flex;
   align-items: center;
@@ -298,7 +308,7 @@ a, button {
 }
 
 .paper-text {
-  color: #573719;
+  color: #5c4a23;
   font: 23px "Aref Ruqaa", "Amiri", serif;
   line-height: 1.8;
 }
@@ -306,7 +316,7 @@ a, button {
 .paper-text strong {
   display: block;
   font-size: 28px;
-  color: #76501f;
+  color: #a67c1e;
 }
 
 .paper-text span {
@@ -320,7 +330,7 @@ a, button {
   width: 52%;
   height: 78%;
   z-index: 4;
-  background: linear-gradient(145deg, #8a6032, #b08448);
+  background: linear-gradient(145deg, #ebd69b, #d8b45d);
   clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
 
@@ -330,7 +340,7 @@ a, button {
   width: 52%;
   height: 78%;
   z-index: 4;
-  background: linear-gradient(215deg, #8a6032, #b08448);
+  background: linear-gradient(215deg, #ebd69b, #d8b45d);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
 
@@ -340,7 +350,7 @@ a, button {
   width: 100%;
   height: 72%;
   z-index: 5;
-  background: linear-gradient(180deg, #9b6c38, #765025);
+  background: linear-gradient(180deg, #dfc06d, #c59f42);
   clip-path: polygon(0 100%, 50% 0, 100% 100%);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -352,7 +362,7 @@ a, button {
   width: 100%;
   height: 65%;
   z-index: 7;
-  background: linear-gradient(180deg, #b08246, #81572c);
+  background: linear-gradient(180deg, #f3e2b3, #cb9f3f);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top center;
   transition: transform 1s cubic-bezier(.2,.8,.2,1), z-index 0s .45s;
@@ -369,11 +379,11 @@ a, button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 35% 30%, #e1b970, #8e5928 72%);
-  color: #f8e6bb;
+  background: radial-gradient(circle at 35% 30%, #fff3cd, #d4af37 75%);
+  color: #ffffff;
   font: 28px Georgia;
-  border: 2px solid rgba(245,211,145,.55);
-  box-shadow: 0 4px 12px rgba(0,0,0,.35);
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.35);
   transition: opacity .35s, transform .35s;
 }
 
@@ -397,7 +407,7 @@ a, button {
 }
 
 @keyframes pulse {
-  50% { opacity: .45; }
+  50% { opacity: 0.5; }
 }
 
 @media(max-width:520px) {
