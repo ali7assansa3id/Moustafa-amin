@@ -7,12 +7,19 @@ function openEnvelope() {
   if (opened) return;
   opened = true;
   
-  if (weddingMusic) {
-    weddingMusic.play().catch(error => console.log("تعذر التشغيل التلقائي للصوت:", error));
-  }
-
+  // إضافة فئة الحركة للظرف
   envelope.classList.add("open");
-  setTimeout(() => envelopeScreen.classList.add("hide"), 1250);
+
+  // التشغيل عند اختفاء الظرف وظهور البطاقة للمستخدم (بعد 1 ثانية)
+  setTimeout(() => {
+    envelopeScreen.classList.add("hide");
+    
+    if (weddingMusic) {
+      weddingMusic.play().catch(error => {
+        console.log("تعذر التشغيل التلقائي للصوت:", error);
+      });
+    }
+  }, 1000);
 }
 
 function toggleMusic() {
